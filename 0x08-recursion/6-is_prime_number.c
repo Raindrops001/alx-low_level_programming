@@ -20,7 +20,7 @@ int is_prime_number(int n)
  * @n: number to evaluate
  * @i: iterator
  *
-   Return: 1 if n is prime, 0 if not
+ * Return: 1 if n is prime, 0 if not
  */
 int actual_prime(int n, int i)
 {
