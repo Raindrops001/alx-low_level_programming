@@ -1,9 +1,11 @@
 #include <stdio.h>
+
 /**
  *main - Entry point
  *Description: 'Print alphabets lowercase'
  *Return: Always 0
  */
+
 int main(void)
 {
 int n = 97;
@@ -15,4 +17,13 @@ n++;
 }
 putchar('\n');
 return (0);
+
+
+
+
+
+
+
+
+
 }
