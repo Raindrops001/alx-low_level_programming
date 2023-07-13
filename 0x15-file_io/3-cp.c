@@ -6,8 +6,8 @@ char *create_buffer(char *file);
 void close_file(int fd);
 
 /**
- * create_buffer - This  Allocates 1024 bytes for a buffer.
- * @file: Naame of the file buffer is storing chars for.
+ * create_buffer - Allocates 1024 bytes for a buffer.
+ * @file: The name of the file buffer is storing chars for.
  *
  * Return: A pointer to the newly-allocated buffer.
  */
@@ -28,8 +28,8 @@ char *create_buffer(char *file)
 }
 
 /**
- * close_file - This Closes file descriptors.
- * @fd: file descriptor to be closed.
+ * close_file - Closes file descriptors.
+ * @fd: The file descriptor to be closed.
  */
 void close_file(int fd)
 {
@@ -45,9 +45,9 @@ void close_file(int fd)
 }
 
 /**
- * main - This Copies the contents of a file to another file.
- * @argc: number of arguments supplied to the program.
- * @argv: Array of pointers to the arguments.
+ * main - Copies the contents of a file to another file.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
  *
  * Return: 0 on success.
  *
@@ -73,7 +73,6 @@ int main(int argc, char *argv[])
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
-
 		if (from == -1 || r == -1)
 		{
 			dprintf(STDERR_FILENO,
@@ -94,8 +93,7 @@ int main(int argc, char *argv[])
 		r = read(from, buffer, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
 
-	}
-	while (r > 0);
+	} while (r > 0);
 
 	free(buffer);
 	close_file(from);
